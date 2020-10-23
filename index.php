@@ -14,6 +14,9 @@ $tpl = 'terex-zp';
 $layout = 'white';
 
 
+$a = 1;
+
+
 $settings = [
 	'preheader' => '',
 	'phone' => '34 643483786',
