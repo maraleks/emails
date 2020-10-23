@@ -12,7 +12,7 @@ class Template {
 	}
 
 		
-	public static function insert($template, $data="", $minify=false) {
+	public static function insert($template, $data="", $minify=true) {
 						
 		$content = false;
 
@@ -24,7 +24,7 @@ class Template {
 				$content = ob_get_clean();
 				
 				
-		if($minify) { $content = self::full_trim(self::symbol($content)); } 
+		if($minify) { $content = self::full_trim($content); } 
 		
 			
 		return $content;

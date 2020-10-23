@@ -7,16 +7,17 @@ error_reporting(E_ALL);
 include "phpmailer/sendmail.php";
 include "Template.php";
 
-$title = 'Снижение цены на выездную диагностику!';
+$title = 'Автоматическое уведомление об окончании срока действия начисленных бонусных баллов';
 
-$tpl = 'piter';
+$tpl = 'terex-zp';
 
-$s = 'test2';
+$layout = 'white';
+
 
 $settings = [
-	'preheader' => 'Официальный дилер ведущих мировых машиностроительных заводов. '.$title,
-	'phone' => '8-800-333-56-63',
-	'email' => 'info@lonmadi.ru',
+	'preheader' => '',
+	'phone' => '34 643483786',
+	'email' => 'deluxenailatencion@gmail.com',
 	'menu' => [
 		'0' => [
 			'title' => 'Каталог техники',
@@ -46,9 +47,9 @@ Params::$imgPlace = false;
 if(!isset($_GET['view'])) {
 
 	ob_start();
-		echo Template::insert("layout/white/header", $settings);
+		echo Template::insert("layout/$layout/header", $settings);
 		echo Template::insert("orders/$tpl/tpl");
-		echo Template::insert("layout/white/footer", $settings);
+		echo Template::insert("layout/$layout/footer", $settings);
 	$content = ob_get_clean();
 
 	echo $content;
@@ -63,7 +64,7 @@ if(!isset($_GET['view'])) {
 
 	echo $tplt;
 
-	if(isset($_GET['mail'])) { echo SendMessage('a.martynov@lonmadi.ru', $cc='', $bcc='', $title, $tplt); }
+	if(isset($_GET['mail'])) { echo SendMessage('mr.dadgel@gmail.com', $cc='', $bcc='', $title, $tplt); }
 
 }
 
@@ -78,7 +79,7 @@ class Params {
 		if(self::$imgPlace==true) {
 			$path = 'img/'.$path;
 		} else {
-			$path = 'http://feedback.jvmgroup.ru/mail/'.$path;
+			$path = 'http://feedback.jvmgroup.ru/'.$path;
 		}
 
 		if($size) { $size = getimagesize($path); $size = $size['3']; }

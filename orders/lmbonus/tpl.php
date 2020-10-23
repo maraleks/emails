@@ -18,24 +18,26 @@
 	
 )?>
 
-<?=Template::insert('bloks/h1','Самые интересные предложения недели')?>
+<?=Template::insert('bloks/h1','Самые интересные предложения')?>
 
 <?=Template::insert('bloks/spacer')?>
 
 <?=Template::insert('bloks/2c', [
-	1=> '<p style="text-align:center">'.Params::img('bonus/b1.jpg','Скидка до 10% на гусеничные экскаваторы').'</p>',
-	2=>'<h5>Главное событие июня. Скидка до 10% на гусеничные экскаваторы.</h5><p>Только до конца июня | Количество ограничено</p>'.Template::insert('bloks/button',['title'=>'Подробнее','link'=>'http://lonmadi.ru/promo/the-main-event-in-may-up-to-10-discount-on-caterpillar-excavators.html'])
+	1=> '<p style="text-align:center">'.Params::img('bonus/b4.jpg','Обслуживание и поставка запчастей для экскаваторов-погрузчиков Terex').'</p>',
+	2=>'<h5>Обслуживание и поставка запчастей для экскаваторов-погрузчиков Terex</h5>'.Template::insert('bloks/button',['title'=>'Подробнее','link'=>'https://lonmadi.ru/promo/lonmadi-dlya-ekskavatorov-pogruzchikov-terex.html'])
+])?>
+
+<?=Template::insert('bloks/2c', [
+	1=> '<p style="text-align:center">'.Params::img('bonus/b5.jpg','Распродажа техники UMG. Количество ограничено!').'</p>',
+	2=>'<h5>Распродажа техники UMG. Количество ограничено!</h5>'.Template::insert('bloks/button',['title'=>'Подробнее','link'=>'https://lonmadi.ru/promo/rasprodazha-tekhniki-umg-avgust-2018.html'])
 ])?>
 
 <?=Template::insert('bloks/2c', [
 	1=> '<p style="text-align:center">'.Params::img('bonus/b2.jpg','Ходовая для экскаваторов').'</p>',
-	2=>'<h5>Программа ЛОНМАДИ Parts</h5><p>Ходовая для экскаваторов</p>'.Template::insert('bloks/button',['title'=>'Подробнее','link'=>'http://lonmadi.ru/promo/program-lonmadi-parts.html'])
+	2=>'<h5>Программа ЛОНМАДИ Parts</h5><p>Ходовая для экскаваторов</p>'.Template::insert('bloks/button',['title'=>'Подробнее','link'=>'https://lonmadi.ru/promo/program-lonmadi-parts.html'])
 ])?>
 
-<?=Template::insert('bloks/2c', [
-	1=> '<p style="text-align:center">'.Params::img('bonus/b3.jpg','Акция к чемпионату мира по футболу FIFA 2018').'</p>',
-	2=>'<h5>Акция к чемпионату мира по футболу FIFA 2018</h5>'.Template::insert('bloks/button',['title'=>'Подробнее','link'=>'http://lonmadi.ru/promo/the-world-cup.html'])
-])?>
+
 
 
 
